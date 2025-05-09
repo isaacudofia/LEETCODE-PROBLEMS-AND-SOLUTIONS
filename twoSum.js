@@ -5,7 +5,7 @@
 //Explanation: Because nums[0] + nums[1] == 9, we return [0, 1].
 
 const nums = [2, 7, 11, 15];
-target = 0;
+target = 9;
 
 const twoSum = (nums, target) => {
   for (let i = 0; i <= nums.length - 1; i++) {
