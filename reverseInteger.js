@@ -1,7 +1,7 @@
 // Input: x = 120
 // Output: 21
 
-const number = 120333;
+const number = 1534236469;
 
 const reverseInteger = (number) => {
   let integerToString = number.toString();
@@ -25,11 +25,15 @@ const reverseInteger = (number) => {
   if (checkForOperator === true) {
     reversedString = Number(reversedString);
     reversedString = reversedString * -1;
-    return console.log(reversedString);
   } else {
     reversedString = Number(reversedString);
-    return console.log(reversedString);
   }
+
+  if (reversedString < -2147483648 || reversedString > 2147483647) {
+    return console.log(0);
+  }
+
+  return console.log(reversedString);
 };
 
 reverseInteger(number);
