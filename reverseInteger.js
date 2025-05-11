@@ -6,34 +6,30 @@ const number = 1534236469;
 const reverseInteger = (number) => {
   let integerToString = number.toString();
 
-  let checkForOperator = null;
+  let checkForOperator = false;
 
   if (integerToString.startsWith("-")) {
     integerToString = integerToString.substring(1);
     integerToString = integerToString.split("");
     checkForOperator = true;
-  } else {
-    checkForOperator = false;
   }
 
   let reversedString = "";
   for (let i = integerToString.length - 1; i >= 0; i--) {
     reversedString += integerToString[i];
   }
-  reversedString = reversedString;
 
-  if (checkForOperator === true) {
-    reversedString = Number(reversedString);
-    reversedString = reversedString * -1;
-  } else {
-    reversedString = Number(reversedString);
+  let reversedNumber = Number(reversedString);
+
+  if (checkForOperator) {
+    reversedNumber = reversedNumber * -1;
   }
 
-  if (reversedString < -2147483648 || reversedString > 2147483647) {
+  if (reversedNumber < -2147483648 || reversedNumber > 2147483647) {
     return console.log(0);
   }
 
-  return console.log(reversedString);
+  return console.log(reversedNumber);
 };
 
 reverseInteger(number);
