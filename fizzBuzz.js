@@ -20,7 +20,7 @@
 
 const num = 15;
 
-const fuzzBuzz = (num) => {
+const fizzBuzz = (num) => {
   let index = 0;
   let array = [];
   while (index < num) {
