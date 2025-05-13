@@ -23,12 +23,11 @@ const containsDuplicate = (nums) => {
     for (let j = i + 1; j < nums.length; j++) {
       console.log(`i: ${nums[i]} and j: ${nums[j]}`);
       if (nums[i] === nums[j]) {
-        true;
-      } else {
-        false;
+        return true;
       }
     }
   }
+  return false;
 };
 
 console.log(containsDuplicate(nums));
